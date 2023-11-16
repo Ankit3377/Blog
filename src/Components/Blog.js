@@ -33,12 +33,18 @@ const sections = [
 ];
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'The Gut Microbiome and Diet: A Symphony of Health',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-  image: 'https://source.unsplash.com/random?wallpapers',
+    "The Gut Microbiome and Diet” is a fascinating topic that explores the intricate relationship between our diet and the trillions of microorganisms residing in our gut, collectively known as the gut microbiome. This blog will delve into how our dietary choices can influence the diversity and function of these microbes, and in turn, how they can impact our health and well-being.",
+  image: 'https://images.nightcafe.studio/jobs/RWd0Yaz6xHE1pZklRqBR/RWd0Yaz6xHE1pZklRqBR--1--g6c5f.jpg?tr=w-1600,c-at_max',
   imageText: 'main image description',
   linkText: 'Continue reading…',
+  // title: 'Title of a longer featured blog post',
+  // description:
+  //   "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+  // image: 'https://source.unsplash.com/random?wallpapers',
+  // imageText: 'main image description',
+  // linkText: 'Continue reading…',
 };
 
 const featuredPosts = [
