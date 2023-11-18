@@ -64,6 +64,22 @@ const featuredPosts = [
     image: 'https://source.unsplash.com/random?wallpapers',
     imageLabel: 'Image Text',
   },
+  {
+    title: 'Post title',
+    date: 'Nov 11',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+  },
+  {
+    title: 'Post title',
+    date: 'Nov 11',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+  },
 ];
 
 
@@ -100,20 +116,12 @@ const defaultTheme = createTheme();
 export function Blog() {
   // export const Blog = ()=> {
   const [markdown1, setMarkdown1] = useState("");
-  const [markdown2, setMarkdown2] = useState("");
-  const [markdown3, setMarkdown3] = useState("");
   useEffect(() => {
     fetch(post1)
       .then((res) => res.text())
       .then((text) => setMarkdown1(text));
-    fetch(post2)
-      .then((res) => res.text())
-      .then((text) => setMarkdown2(text));
-    fetch(post3)
-      .then((res) => res.text())
-      .then((text) => setMarkdown3(text));
   }, []);
-  const posts = [markdown1, markdown2, markdown3];
+  const posts = [markdown1];
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -135,6 +143,11 @@ export function Blog() {
               archives={sidebar.archives}
               social={sidebar.social}
             />
+          </Grid>
+          <Grid container spacing={4}>
+            {featuredPosts.map((post) => (
+              <FeaturedPost key={post.title} post={post} />
+            ))}
           </Grid>
         </main>
       </Container>
